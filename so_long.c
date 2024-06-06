@@ -1,10 +1,9 @@
-#include "mlx/mlx.h"
-#include <stdlib.h>
- 
+#include "so_long.h"
 
-
-int main(void)
+int main(int argc, char **argv)
 {
+	if (argc != 2)
+		printf("error\n");
 /* 	void *mlx_ptr;
 	void *win_ptr;
  
@@ -18,4 +17,9 @@ int main(void)
 	mlx_destroy_display(mlx_ptr);
 	free(mlx_ptr);
 	return (0); */
+}
+
+int	read_map ()
+{
+
 }
