@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrekalde <mrekalde@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/16 14:35:53 by mrekalde          #+#    #+#             */
-/*   Updated: 2024/06/16 16:11:21 by mrekalde         ###   ########.fr       */
+/*   Created: 2023/09/26 16:11:47 by mrekalde          #+#    #+#             */
+/*   Updated: 2023/10/11 10:05:31 by mrekalde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#include"libft.h"
 
-# include <stdlib.h>
-# include <stdio.h>
-# include "mlx/mlx.h"
-# include "gnl/get_next_line.h"
-# include "map_reader.c"
-# include "validation.c"
-# include "libft/libft.h"
-
-typedef struct s_game
+char	*ft_strdup(const char *s1)
 {
-	char **map;
-}t_game;
+	char	*s;
+	int		i;
 
-
-#endif
+	i = 0;
+	s = ft_calloc(sizeof(char), (ft_strlen(s1) + 1));
+	if (!s)
+		return (0);
+	while (s1[i])
+	{
+		s[i] = s1[i];
+		i++;
+	}
+	s[ft_strlen(s1)] = 0;
+	return (s);
+}
+/*
+int main()
+{
+	char a[] = "pepaso";
+    char *p=ft_strdup(a);
+    printf("%s\n",p);
+	printf("%s\n",strdup(a));
+}
+*/

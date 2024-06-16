@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mrekalde <mrekalde@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/16 14:35:40 by mrekalde          #+#    #+#             */
+/*   Updated: 2024/06/16 16:18:38 by mrekalde         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "so_long.h"
 
 char **fill_map(char **map, int h, char *argv)
@@ -66,22 +78,14 @@ char *initParams(char *argv)
 
 int main(int argc, char **argv)
 {
+	char	*string;
+
 	if (argc != 2)
+		printf("error\n");
+	string = ft_strrchr(argv[1], '.');
+	if (!ft_strcmp(string, ".ber") == 0)
 		printf("error\n");
 	else
 		initParams(argv[1]);
-/* 	void *mlx_ptr;
-	void *win_ptr;
- 
-	mlx_ptr = mlx_init();
-	if (!mlx_ptr)
-		return (1);
-	win_ptr = mlx_new_window(mlx_ptr, 600, 400, "hi :)");
-	if (!win_ptr)
-		return (free(mlx_ptr), 1);
-	mlx_destroy_window(mlx_ptr, win_ptr);
-	mlx_destroy_display(mlx_ptr);
-	free(mlx_ptr);
-	return (0); */
 	return (0);
 }

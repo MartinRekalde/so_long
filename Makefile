@@ -1,7 +1,21 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mrekalde <mrekalde@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/06/16 14:35:55 by mrekalde          #+#    #+#              #
+#    Updated: 2024/06/16 16:16:51 by mrekalde         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = so_long
 
 SRCS_DIR = ./
-SRCS = so_long.c gnl/get_next_line.c gnl/get_next_line_utils.c
+SRCS =	so_long.c \
+		gnl/get_next_line.c gnl/get_next_line_utils.c \
+		libft/ft_strrchr.c libft/ft_strcmp.c
 
 OBJECTS = $(addprefix $(SRCS_DIR), $(SRCS:.c=.o))
 DOTC = $(addprefix $(SRCS_DIR), $(SRCS))

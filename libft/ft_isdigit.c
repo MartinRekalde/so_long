@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrekalde <mrekalde@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/16 14:35:53 by mrekalde          #+#    #+#             */
-/*   Updated: 2024/06/16 16:11:21 by mrekalde         ###   ########.fr       */
+/*   Created: 2023/09/12 11:07:49 by mrekalde          #+#    #+#             */
+/*   Updated: 2023/10/11 09:49:33 by mrekalde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <stdio.h>
-# include "mlx/mlx.h"
-# include "gnl/get_next_line.h"
-# include "map_reader.c"
-# include "validation.c"
-# include "libft/libft.h"
-
-typedef struct s_game
+int	ft_isdigit(int c)
 {
-	char **map;
-}t_game;
-
-
-#endif
+	if (c >= 48 && c <= 57)
+		return (1);
+	else
+		return (0);
+}
+/*
+int main()
+{
+	int i;
+	i = ft_isdigit(50) + '0';
+	write(1, &i, 1);
+}
+*/

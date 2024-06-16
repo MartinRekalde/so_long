@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrekalde <mrekalde@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/16 14:35:53 by mrekalde          #+#    #+#             */
-/*   Updated: 2024/06/16 16:11:21 by mrekalde         ###   ########.fr       */
+/*   Created: 2023/09/18 12:26:06 by mrekalde          #+#    #+#             */
+/*   Updated: 2023/10/11 09:45:36 by mrekalde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <stdio.h>
-# include "mlx/mlx.h"
-# include "gnl/get_next_line.h"
-# include "map_reader.c"
-# include "validation.c"
-# include "libft/libft.h"
-
-typedef struct s_game
+void	ft_bzero(void *s, size_t n)
 {
-	char **map;
-}t_game;
+	unsigned char	*j;
+	size_t			i;
 
+	i = 0;
+	j = (unsigned char *)s;
+	while (i < n)
+	{
+		j[i] = 0;
+		i++;
+	}
+}
+/*
+int	main(void)
+{
+	char str[] = "Hello world";
 
-#endif
+	ft_bzero(str, 4);
+	write(1, &str, sizeof(str)/sizeof(str[0]));
+}*/

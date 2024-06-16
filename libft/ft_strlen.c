@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrekalde <mrekalde@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/16 14:35:53 by mrekalde          #+#    #+#             */
-/*   Updated: 2024/06/16 16:11:21 by mrekalde         ###   ########.fr       */
+/*   Created: 2023/09/12 11:48:49 by mrekalde          #+#    #+#             */
+/*   Updated: 2023/10/06 13:13:06 by mrekalde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <stdio.h>
-# include "mlx/mlx.h"
-# include "gnl/get_next_line.h"
-# include "map_reader.c"
-# include "validation.c"
-# include "libft/libft.h"
-
-typedef struct s_game
+size_t	ft_strlen(const char *str)
 {
-	char **map;
-}t_game;
+	size_t	i;
 
+	i = 0;
+	while (*str != '\0')
+	{
+		i++;
+		str++;
+	}
+	return (i);
+}
+/*
+int main()
+{
+	int i;
+	char string[] = "martinloi";
 
-#endif
+	i = ft_strlen(string) + '0';
+	write(1, &i, 1);
+}
+*/

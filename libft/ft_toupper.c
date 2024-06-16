@@ -1,30 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   so_long.h                                          :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrekalde <mrekalde@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/16 14:35:53 by mrekalde          #+#    #+#             */
-/*   Updated: 2024/06/16 16:11:21 by mrekalde         ###   ########.fr       */
+/*   Created: 2023/09/21 14:49:51 by mrekalde          #+#    #+#             */
+/*   Updated: 2023/10/06 13:13:19 by mrekalde         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#include "libft.h"
 
-# include <stdlib.h>
-# include <stdio.h>
-# include "mlx/mlx.h"
-# include "gnl/get_next_line.h"
-# include "map_reader.c"
-# include "validation.c"
-# include "libft/libft.h"
-
-typedef struct s_game
+int	ft_toupper(int c)
 {
-	char **map;
-}t_game;
-
-
-#endif
+	if (c >= 97 && c <= 122)
+	{
+		c = c - 32;
+		return (c);
+	}	
+	else
+		return (c);
+}
+/*
+int	main()
+{
+	int		i;
+	char	a[] = "abcdeffghijklmnopqrstuvwyz";
+	char	b;
+	i = 0;
+	while(a[i])
+	{
+		b = ft_toupper(a[i]);
+		write(1, &b, 1);
+		i++;
+	}
+}
+*/
